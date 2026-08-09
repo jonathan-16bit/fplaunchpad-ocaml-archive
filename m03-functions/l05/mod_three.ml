@@ -1,0 +1,5 @@
+(* Mutual recursion *)
+(* Decrement and hand off to corresponding remainder mod 3 *)
+let rec mod3_eq_0 n = if n = 0 then true else mod3_eq_2 (n - 1)
+and mod3_eq_1 n = if n = 0 then false else mod3_eq_0 (n - 1)
+and mod3_eq_2 n = if n = 0 then false else mod3_eq_1 (n - 1)
